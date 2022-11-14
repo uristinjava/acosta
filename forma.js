@@ -4,13 +4,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const itemEl = document.querySelector('.form_action');
-
+    const bodyEl = document.querySelector('.body');
     const formEl = document.querySelector('.wrapper_form');
+    const mainEl = document.querySelector('.main');
+
+
 
     //обработчик события клика на ссылку 
     itemEl.addEventListener('click', (event) => {
         formEl.classList.toggle('visible');
+        bodyEl.classList.toggle('lock');
+        mainEl.classList.toggle('blur');
+
     });
+
+    /**
+     * обрабатываем событие убрать форму
+     * 1. форма убирается если нажали на пустое поле
+     * 2. форма убирается если нажали на кнопку отправить
+     * 3. форма убирается еcли нажали на кнопку отмена
+     */
+
+
+
+    window.addEventListener('click', e => {
+
+        const target = e.target
+        if (target.closest('.cansel_botton')) {
+            formEl.classList.add('visible');
+            bodyEl.classList.remove('lock');
+            mainEl.classList.remove('blur');
+        } else {
+            return
+        }
+    });
+
+    // if (formEl.contains('visible')) {
+
+    //     window.addEventListener('click', e => {
+    //         const target = e.target;
+    //         if (!target.closest('.send_botton')) {
+    //             formEl.classList.remove('visible');
+    //             bodyEl.classList.remove('lock');
+    //             mainEl.classList.remove('blur');
+    //         }
+    //     })
+    // }
+
+
+
 
     // function getRenderForm() {
     //     return `
