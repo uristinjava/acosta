@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper_form {
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+    position: fixed;
+    background-color: white;
+    z-index: 100;
+    left: 36%;
+    top: 6%;
+
+
+}
+
+.visible {
+    display: none;
+}
+
+.area {
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    border-bottom: 1px solid gray;
+    border-top: 2px solid gray;
+}
+
+/* Убираем стрелочки в поле ввода ИНН */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+/* Убираем стрелочки в поле ввода ИНН */
+
+.forma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input._error {
+    box-shadow: 0 0 15px red;
+}
+
+.text_header {
+    margin: 15px 0px;
+    padding: 15px 0px;
+
+}
+
+.input {
+    font-size: 14px;
+    width: 25rem;
+    padding: 8px;
+    margin-top: 15px;
+    height: 1.85rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid;
+}
+
+.under_text {
+    font-size: 12px;
+    color: red;
+}
+
+.text_area {
+    height: 4rem;
+    resize: none;
+
+}
+
+.bottom_box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    margin: 10px 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.button:last-child {
+    margin-right: 0px;
+}
+
+.text_botton {
+    padding: 10px;
+    text-align: center;
+    color: gray;
+}
+
+.button:hover {
+    border: 1px solid blue
+}
+
+.button:hover .text_botton {
+    color: blue;
+}
